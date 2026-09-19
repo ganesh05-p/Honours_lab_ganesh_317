@@ -1,0 +1,10 @@
+../../../rtl/verilog/aes_cipher_top.v
+../../../rtl/verilog/aes_inv_cipher_top.v
+../../../rtl/verilog/aes_inv_sbox.v
+../../../rtl/verilog/aes_key_expand_128.v
+../../../rtl/verilog/aes_rcon.v
+../../../rtl/verilog/aes_sbox.v
+../../../rtl/verilog/timescale.v
+../../../axi/aes_axi_slave.v
+/home/student/Documents/317/IPs/verilog_axi-interconnect-master/interconnect.v
+../../../bench/verilog/axi_aes_interconnect_top.v
