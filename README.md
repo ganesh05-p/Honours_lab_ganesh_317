@@ -70,7 +70,12 @@ Only the crossbar + dummy-slave stage exists today; there is no SoC top module y
 Every `mXX` target above is currently the same generic [`axi_slave_dummy.v`](<https://github.com/ganesh05-p/Honours_lab_ganesh_317/blob/main/soc_project_data%20buffering/tb%20files/axi_slave_dummy.v>) instance — the names in the diagram describe where the real I2C, AES, UART, DMA, etc. blocks are planned to land, not what is driving those ports today. Separately, and not shown above because it isn't wired into this crossbar, the AES core has its own experimental AXI slave and its own standalone interconnect test (see [§6](#6-aes-axi-experiment-standalone-not-yet-merged)). No VeeR EL2 core, no CPU-facing SoC top, and no AXI-to-WISHBONE I2C bridge exist in the repository yet.
 
 ## Diagrams
-<p align="center"> <img src="soc_project_data%20buffering/Docs/diagrams/soc_architecture_current.svg" alt="Current architecture: AXI4 2x8 crossbar with dummy slaves" width="900"/> </p>
+<p align="center">
+  <a href="https://github.com/ganesh05-p/Honours_lab_ganesh_317/blob/main/axi-lite_uart-ipcore-develop/documentation/axi-uart.png">
+    <img src="https://raw.githubusercontent.com/ganesh05-p/Honours_lab_ganesh_317/main/axi-lite_uart-ipcore-develop/documentation/axi-uart.png" alt="AXI-Lite UART IP block diagram" width="500"/>
+  </a>
+  <br/><sub>AXI‑Lite UART IP block diagram, vendored with the core (see also the source <code>.vsdx</code> alongside it)</sub>
+</p>
 
 There is no top-level SoC block diagram checked into the repo yet — the ASCII sketch above is the closest thing until the crossbar has real peripherals attached and a diagram is added under `soc_project_data buffering/Docs/`.
 
