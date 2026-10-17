@@ -67,14 +67,33 @@ Only the crossbar + dummy-slave stage exists today; there is no SoC top module y
                          └───────────────────────────────┘
 ```
 
+
 Every `mXX` target above is currently the same generic [`axi_slave_dummy.v`](<https://github.com/ganesh05-p/Honours_lab_ganesh_317/blob/main/soc_project_data%20buffering/tb%20files/axi_slave_dummy.v>) instance — the names in the diagram describe where the real I2C, AES, UART, DMA, etc. blocks are planned to land, not what is driving those ports today. Separately, and not shown above because it isn't wired into this crossbar, the AES core has its own experimental AXI slave and its own standalone interconnect test (see [§6](#6-aes-axi-experiment-standalone-not-yet-merged)). No VeeR EL2 core, no CPU-facing SoC top, and no AXI-to-WISHBONE I2C bridge exist in the repository yet.
 
 ## Diagrams
+
+### SoC Architecture
+
+<p align="center">
+  <a href="https://github.com/ganesh05-p/Honours_lab_ganesh_317/blob/main/soc_project_data%20buffering/Docs/RISC-V%20SoC%20Real-Time%20Buffering%20Architecture.png">
+    <img src="https://raw.githubusercontent.com/ganesh05-p/Honours_lab_ganesh_317/main/soc_project_data%20buffering/Docs/RISC-V%20SoC%20Real-Time%20Buffering%20Architecture.png"
+         alt="RISC-V VeeR EL2 Based Real-Time Data Buffering SoC Architecture"
+         width="800"/>
+  </a>
+  <br/>
+  <sub>RISC-V VeeR EL2 Based Real-Time Data Buffering SoC Architecture</sub>
+</p>
+
+### AXI-Lite UART IP Block Diagram
+
 <p align="center">
   <a href="https://github.com/ganesh05-p/Honours_lab_ganesh_317/blob/main/axi-lite_uart-ipcore-develop/documentation/axi-uart.png">
-    <img src="https://raw.githubusercontent.com/ganesh05-p/Honours_lab_ganesh_317/main/axi-lite_uart-ipcore-develop/documentation/axi-uart.png" alt="AXI-Lite UART IP block diagram" width="500"/>
+    <img src="https://raw.githubusercontent.com/ganesh05-p/Honours_lab_ganesh_317/main/axi-lite_uart-ipcore-develop/documentation/axi-uart.png"
+         alt="AXI-Lite UART IP block diagram"
+         width="500"/>
   </a>
-  <br/><sub>AXI‑Lite UART IP block diagram, vendored with the core (see also the source <code>.vsdx</code> alongside it)</sub>
+  <br/>
+  <sub>AXI-Lite UART IP block diagram, vendored with the core (see also the source .vsdx alongside it)</sub>
 </p>
 
 There is no top-level SoC block diagram checked into the repo yet — the ASCII sketch above is the closest thing until the crossbar has real peripherals attached and a diagram is added under `soc_project_data buffering/Docs/`.
