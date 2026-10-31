@@ -1,0 +1,6 @@
+signal_name,direction,width,clocking_block,description
+fifo_irq,input,1,mon_cb,FIFO watermark/overflow interrupt (observation only)
+dma_irq,input,1,mon_cb,DMA transfer-complete interrupt (observation only)
+uart_irq,input,1,mon_cb,UART TX/RX interrupt (observation only)
+cpu_eip,input,2,mon_cb,PLIC external interrupt pending to VeeR EL2 core
+uart_tx,input,1,mon_cb,Serial UART TX bitstream (observation only)

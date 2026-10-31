@@ -1,0 +1,30 @@
+signal_name,direction,width,channel,clocking_block,description
+awid,output,8,write_address,drv_cb,Write address ID
+awaddr,output,32,write_address,drv_cb,Write address
+awlen,output,8,write_address,drv_cb,Burst length (beats-1)
+awsize,output,3,write_address,drv_cb,Burst size (bytes per beat encoded)
+awburst,output,2,write_address,drv_cb,Burst type (FIXED/INCR/WRAP)
+awvalid,output,1,write_address,drv_cb,Write address valid
+awready,input,1,write_address,drv_cb,Write address ready (from slave)
+wdata,output,32,write_data,drv_cb,Write data
+wstrb,output,4,write_data,drv_cb,Write byte strobes (DATA_WIDTH/8)
+wlast,output,1,write_data,drv_cb,Write last beat indicator
+wvalid,output,1,write_data,drv_cb,Write data valid
+wready,input,1,write_data,drv_cb,Write data ready (from slave)
+bid,input,8,write_response,drv_cb,Write response ID
+bresp,input,2,write_response,drv_cb,Write response (OKAY/SLVERR/DECERR)
+bvalid,input,1,write_response,drv_cb,Write response valid
+bready,output,1,write_response,drv_cb,Write response ready
+arid,output,8,read_address,drv_cb,Read address ID
+araddr,output,32,read_address,drv_cb,Read address
+arlen,output,8,read_address,drv_cb,Read burst length (beats-1)
+arsize,output,3,read_address,drv_cb,Read burst size
+arburst,output,2,read_address,drv_cb,Read burst type
+arvalid,output,1,read_address,drv_cb,Read address valid
+arready,input,1,read_address,drv_cb,Read address ready (from slave)
+rid,input,8,read_data,drv_cb,Read data ID
+rdata,input,32,read_data,drv_cb,Read data
+rresp,input,2,read_data,drv_cb,Read response (OKAY/SLVERR/DECERR)
+rlast,input,1,read_data,drv_cb,Read last beat indicator
+rvalid,input,1,read_data,drv_cb,Read data valid
+rready,output,1,read_data,drv_cb,Read data ready

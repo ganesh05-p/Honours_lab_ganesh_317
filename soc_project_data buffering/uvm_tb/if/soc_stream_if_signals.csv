@@ -1,0 +1,4 @@
+signal_name,direction,width,clocking_block,description
+valid,output,1,drv_cb,Stream valid (driven by stimulus agent into DUT)
+data,output,32,drv_cb,32-bit sensor sample value
+ready,input,1,drv_cb,Back-pressure from FIFO (DUT drives; agent monitors)

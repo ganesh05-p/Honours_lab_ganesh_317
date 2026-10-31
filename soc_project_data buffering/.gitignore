@@ -1,0 +1,11 @@
+
+*.fsdb
+*.nov
+*.log
+simv*
+*.daidir/
+*.vdb/
+csrc/
+verdiLog/
+*.bak
+ucli.key
